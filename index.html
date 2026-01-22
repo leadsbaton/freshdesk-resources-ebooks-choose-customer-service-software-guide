@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Customer Service Benchmark Report 2025 - Freshworks</title>
+    <title>Choosing The Right Customer Service Software - Freshworks</title>
     <meta name="description"
         content="Data-backed insights from 1.2 billion support tickets. Benchmark your performance and set new goals with the Customer Service Benchmark Report 2025.">
 
@@ -13,243 +13,272 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <style>
-        /* Custom styles for 'Inter' font throughout the body */
         body {
             font-family: 'Inter', sans-serif;
         }
 
-        /* Custom color for the hero left column */
-        .bg-mint-green {
+        .bg-fresh-green {
             background-color: #E8F7F0;
         }
 
-        /* Custom style for the submit button to ensure consistent purple/violet */
         .btn-primary {
             background-color: #8B5CF6;
-            /* Violet 600 */
+            transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
             background-color: #7C3AED;
-            /* Violet 700 */
+            transform: translateY(-1px);
+        }
+
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
 
-<body class="antialiased">
+<body class="antialiased text-gray-900 bg-white">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-white flex justify-between items-center p-4 sm:p-6 shadow-md">
-        <img src="assets/img/headerLogoLight.webp" alt="Freshworks Logo" class="h-8 sm:h-10">
+    <header class="bg-white py-4 border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <img src="assets/img/headerLogoLight.webp" alt="Freshworks Logo" class="h-8">
+        </div>
     </header>
-    <!--  full width -->
-    <section class="w-full bg-white-100 pt-32 pb-16 lg:pt-40 lg:pb-20">
-        <div class="max-w-[1400px] mx-auto ">
-            <div class="grid lg:grid-cols-2 gap-0 items-stretch overflow-hidden">
 
-                <div class="p-6 sm:p-10 lg:p-12 space-y-8 bg-green-200 order-1 lg:order-1 flex flex-col justify-center">
-                    <h2 class="text-2xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                        Data-backed insights from 1.2 billion support tickets
-                    </h2>
+    <main>
+        <section class="min-h-[800px] flex items-stretch">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-2">
 
-                    <p class="text-lg text-gray-800">
-                        Customer expectations are at an all-time high and traditional support models are falling short.
-                        Long wait times and disconnected tools aren't just inefficiencies, they're deal-breakers. In
-                        2025,
-                        leading brands are embracing <span class="font-bold">AI and people-first strategies</span> to
-                        deliver faster, smarter
-                        support at scale.
-                    </p>
-
-                    <p class="text-lg text-gray-800">
-                        The Customer Service Benchmark Report 2025 is your guide to navigating this shift.
-                    </p>
-
-                    <div class="pt-4 flex items-end space-x-6">
-                        <img src="assets/img/image32a.png" alt="The Customer Service Benchmark Report 2025 cover">
-                    </div>
-                </div>
-
-                <div id="heroFormContainer" class="p-6 sm:p-10 lg:p-12 bg-mint-green order-2 lg:order-2">
-                    <form id="heroForm" class="space-y-4">
-                        <div class=" mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name<span
-                                        class="text-red-500">*</span></label>
-                                <input type="text" id="firstName" name="firstName" required
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-600">
-                            </div>
-                            <div>
-                                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name<span
-                                        class="text-red-500">*</span></label>
-                                <input type="text" id="lastName" name="lastName" required
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-600">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="businessEmail" class="block text-sm font-medium text-gray-700">Business
-                                Email<span class="text-red-500">*</span></label>
-                            <input type="email" id="businessEmail" name="businessEmail" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-600">
-                        </div>
-
-                        <div>
-                            <label for="companyName" class="block text-sm font-medium text-gray-700">Company Name<span
-                                    class="text-red-500">*</span></label>
-                            <input type="text" id="companyName" name="companyName" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-600">
-                        </div>
-
-                        <div>
-                            <label for="organizationSize" class="block text-sm font-medium text-gray-700">Organization
-                                Size<span class="text-red-500">*</span></label>
-                            <select id="organizationSize" name="organizationSize" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-600 bg-white">
-                                <option value="" disabled selected>Select size</option>
-                                <option value="1-50">1-50 employees</option>
-                                <option value="51-200">51-200 employees</option>
-                                <option value="201-500">201-500 employees</option>
-                                <option value="501-1000">501-1000 employees</option>
-                                <option value="1000+">1000+ employees</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="country" class="block text-sm font-medium text-gray-700">Country<span
-                                    class="text-red-500">*</span></label>
-                            <input type="text" id="country" name="country" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-600">
-                        </div>
-                        <div class="pt-2">
-                            <label for="privacyConsent"
-                                class="flex items-center text-xs text-gray-700 leading-relaxed flex-wrap gap-1">
-                                <input type="checkbox" id="privacyConsent" name="privacyConsent" class="mr-2 mt-0.5">
-                                <span>By supplying my contact information, I accept the Freshworks</span>
-                                <a href="https://www.freshworks.com/terms/" target="_blank"
-                                    class="text-violet-600 hover:underline whitespace-nowrap">
-                                    Terms of Service
-                                </a>
-                                <span>and</span>
-                                <a href="https://www.freshworks.com/privacy/" target="_blank"
-                                    class="text-violet-600 hover:underline whitespace-nowrap">
-                                    Privacy Notice.
-                                </a>
-                            </label>
-                        </div>
-
-                        <input type="hidden" name="timestamp" id="timestamp">
-
-                        <button type="submit" id="submitBtn"
-                            class="w-full btn-primary hover:bg-violet-700 text-white py-3 text-lg font-semibold rounded-md transition duration-300 shadow-lg mt-6">
-                            Submit
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-10 text-left lg:text-center">
-                Why you should read this report:
-            </h2>
-
-
-            <div class="grid md:grid-cols-3 gap-10 text-left">
-                <div class="space-y-4">
-                    <img src="assets/img/image32c.png" alt="Chart Icon" class="w-16 h-16 object-contain mb-4 md:mx-0">
-                    <p class="text-gray-900 font-semibold leading-relaxed">
-                        Know where you stand: Are you a <span class="font-bold">Trendsetter, Performer, or
-                            Aspirant</span>? Learn what it takes to move up.
-                    </p>
-                </div>
-
-                <div class="space-y-4">
-                    <img src="assets/img/image32d.png" alt="AI Gear Icon" class="w-16 h-16 object-contain mb-4 md:mx-0">
-                    <p class="text-gray-900 font-semibold leading-relaxed">
-                        See what's working: Find out how <span class="font-bold">AI-powered teams</span> are cutting
-                        resolution times from <span class="font-bold">32 hours to just 32 minutes</span>.
-                    </p>
-                </div>
-
-                <div class="space-y-4">
-                    <img src="assets/img/image32e.png" alt="Chat Bubble Icon"
-                        class="w-16 h-16 object-contain mb-4 md:mx-0">
-                    <p class="text-gray-900 font-semibold leading-relaxed">
-                        Unlock the new playbook: Discover the channels, workflows, and <span class="font-bold">AI
-                            strategies</span> that are driving <span class="font-bold">99% CSAT</span>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="max-w-7xl mx-auto pt-20">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <div class="space-y-6 text-left">
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-                            Drawing from <span class="font-bold">32,000+ companies and 1.2 billion interactions</span>,
-                            it
-                            introduces the Customer
-                            Service Performance Matrix—a clear framework to benchmark your performance and identify
-                            areas to
-                            improve.
+                <div class="bg-[#C6EAD8] p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+                    <div class="max-w-xl">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-8">
+                            Analyze, evaluate, and uncomplicate
+                        </h1>
+                        <p class="text-xl text-gray-800 leading-relaxed mb-12">
+                            The Freshworks Buyer’s Guide 2026 enables CX leaders with practical frameworks, data, and
+                            insights to choose the customer service partner and solution for the customer of today.
                         </p>
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed ">
-                            Whether you're scaling fast or leveling up a mature team, this report is your roadmap to
-                            delivering
-                            exceptional,
-                            efficient customer service in 2025 and beyond.<br>
-                            <a href="#heroFormContainer"
-                                class="font-bold text-purple-600 hover:text-purple-800 hover:underline">Download
-                                now!</a>
-                        </p>
-                    </div>
 
-                    <div class="flex justify-center">
-                        <img src="assets/img/image32f.png"
-                            alt="Customer Service Performance Matrix pyramid: Aspirants, Performers, Trendsetters"
-                            class="w-full max-w-sm h-auto object-contain">
+                        <div class="pt-4 flex items-end space-x-6">
+                            <img src="assets/img/image62b.png" alt="Choosing The Right Customer Service Software Guide"
+                                class="w-full h-auto drop-shadow-2xl">
+                        </div>
                     </div>
+                </div>
 
+                <div class="bg-white p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+                    <div class="max-w-lg w-full">
+                        <form id="heroForm" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="firstName" class="text-sm font-bold text-gray-900">First Name: *</label>
+                                    <input type="text" id="firstName" name="firstName" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-violet-500 outline-none">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="lastName" class="text-sm font-bold text-gray-900">Last Name: *</label>
+                                    <input type="text" id="lastName" name="lastName" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-violet-500 outline-none">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="businessEmail" class="text-sm font-bold text-gray-900">Business Email:
+                                    *</label>
+                                <input type="email" id="businessEmail" name="businessEmail" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-violet-500 outline-none">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="companyName" class="text-sm font-bold text-gray-900">Company Name: *</label>
+                                <input type="text" id="companyName" name="companyName" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-violet-500 outline-none">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="organizationSize" class="text-sm font-bold text-gray-900">Organization Size:
+                                    *</label>
+                                <select id="organizationSize" name="organizationSize" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-violet-500 outline-none bg-white">
+                                    <option value="" disabled selected>Select size</option>
+                                    <option value="1-50">1-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-500">201-500 employees</option>
+                                    <option value="501-1000">501-1000 employees</option>
+                                    <option value="1000+">1000+ employees</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="country" class="text-sm font-bold text-gray-900">Country: *</label>
+                                <input type="text" id="country" name="country" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-violet-500 outline-none">
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-3 pt-2">
+                                    <input type="checkbox" id="privacyConsent" name="privacyConsent" required
+                                        class="mt-1 h-4 w-4 rounded border-gray-300 text-[#8B3DFF] focus:ring-[#8B3DFF]">
+
+                                    <label for="privacyConsent"
+                                        class="text-[12px] text-gray-600 leading-normal cursor-pointer">
+                                        By supplying my contact information, I accept the Freshworks
+                                        <a href="https://www.freshworks.com/terms/" target="_blank"
+                                            class="text-[#8B3DFF] hover:underline font-medium">Terms of Service</a>
+                                        and
+                                        <a href="https://www.freshworks.com/privacy/" target="_blank"
+                                            class="text-[#8B3DFF] hover:underline font-medium">Privacy Notice</a>.
+                                    </label>
+                                </div>
+
+                                <input type="hidden" name="timestamp" id="timestamp">
+
+                                <button type="submit"
+                                    class="w-full bg-[#8B3DFF] hover:bg-[#7A2EE5] text-white py-4 text-sm md:text-lg font-bold rounded shadow-lg transition-all transform hover:-translate-y-0.5 uppercase tracking-widest">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer class="bg-black text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-2">
-                <p class="text-gray-300">
-                    <a href="https://www.freshworks.com/privacy/" target="_blank" class="hover:text-white">Privacy
-                        Policy</a> |
-                    <a href="https://www.freshworks.com/terms/" target="_blank" class="hover:text-white">Terms of
-                        Service</a>
+        </section>
+    </main>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto mb-20 space-y-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
+                    Your guide to modern, uncomplicated customer service
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    The guide walks you through everything you need to know to evaluate, compare, and choose the right
+                    solution that meets customer expectations and prepares you to deliver excellent customer service.
                 </p>
-                <p class="text-gray-400">© 2025 Freshworks Inc. All Rights Reserved</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-16 text-left">
+                <div class="space-y-6">
+                    <img src="assets/img/image62c.png" alt="Evaluation Framework Icon" class="w-20 h-20 object-contain">
+                    <h3 class="text-2xl font-bold text-gray-900">A practical evaluation framework</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Learn how to audit your current setup, identify gaps, and map them to business outcomes.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <img src="assets/img/image62d.png" alt="Comparison Checklist Icon" class="w-20 h-20 object-contain">
+                    <h3 class="text-2xl font-bold text-gray-900">Vendor comparison checklist</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        A ready-to-use scorecard with 9 key dimensions, from omnichannel support to AI readiness and
+                        total cost of ownership.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <img src="assets/img/image62f.png" alt="Future Readiness Icon" class="w-20 h-20 object-contain">
+                    <h3 class="text-2xl font-bold text-gray-900">Future-readiness markers</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Understand how the platform adapts as the business and the space change with speed, scale, and
+                        agent productivity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="bg-[#FFE0AE] rounded-[3rem] p-12 md:p-16 lg:p-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <div class="space-y-8">
+                    <span class="text-8xl font-serif text-gray-900 leading-none block h-10">“</span>
+
+                    <p class="text-2xl md:text-3xl font-medium text-gray-900 leading-relaxed">
+                        Freshdesk has helped in achieving significant response time reduction (50%-90% in some cases),
+                        better cooperation and increased sense of teamwork among employees, and clear and helpful
+                        reporting tools.
+                    </p>
+
+                    <div class="pt-4">
+                        <p class="font-bold text-xl text-gray-900">Aleksandra W</p>
+                        <p class="text-sm text-gray-700 uppercase tracking-widest font-semibold mt-2">
+                            Customer Operations QA, Playbook Engineering
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center lg:justify-end">
+                    <div
+                        class="bg-white p-16 rounded-[2.5rem] shadow-sm w-full max-w-[420px] aspect-square flex items-center justify-center">
+                        <img src="assets/img/image62e.png" alt="Playbook Engineering Logo"
+                            class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-24 px-6 bg-white">
+        <div
+            class="max-w-7xl mx-auto bg-[#130E29] rounded-[3.5rem] py-20 px-10 md:px-20 text-center space-y-10 relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-600/20 blur-[120px] rounded-full -mr-48 -mt-48">
+            </div>
+
+            <div class="relative z-10 space-y-8">
+                <h2 class="text-3xl md:text-5xl font-bold text-white max-w-4xl mx-auto leading-tight">
+                    Looking to make the right decision and scale your support operations?
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                    Read the guide, which holds the necessary data, insights, and frameworks that help CX leaders make
+                    confident, future-ready decisions.
+                </p>
+                <a href="#"
+                    class="inline-block bg-[#8B3DFF] hover:bg-[#7A2EE5] text-white font-bold py-5 px-12 rounded-full shadow-lg transition-all transform hover:scale-105 uppercase tracking-widest text-sm">
+                    Read the guide here
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <p class="text-gray-400">© 2026 Freshworks Inc. All Rights Reserved</p>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="https://www.freshworks.com/privacy/" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="https://www.freshworks.com/terms/" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-
     <script>
-        // EmailJS Configuration (Using your provided keys)
         const EMAIL_SERVICE_ID = "service_z09fuxl";
         const EMAIL_TEMPLATE_ID = "template_7jmqb59";
         const EMAIL_PUBLIC_KEY = "I64IeI2zG_00GsyoX";
-        // Final URL for the PDF download (Opens after successful form submission)
-        const PDF_DOWNLOAD_URL = "https://leadsbaton.github.io/freshworks-customer-service-benchmark-report-2025/assets/pdf/Customer-Service-Benchmark-Report-2025.pdf";
+        const PDF_DOWNLOAD_URL = "https://leadsbaton.github.io/freshworks-customer-service-benchmark-report-202/assets/pdf/Freshworks_Buyers_Guide_eBook_1125.pdf";
 
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize EmailJS
             emailjs.init(EMAIL_PUBLIC_KEY);
 
             const heroForm = document.getElementById('heroForm');
             const timestampInput = document.getElementById('timestamp');
             const submitBtn = document.getElementById('submitBtn');
 
-            // Helper to display a temporary notification message
             const showDialog = (message, isSuccess = true) => {
                 const dialog = document.createElement("div");
-                dialog.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-xl z-50 transition-all duration-300 transform translate-x-full opacity-0 ${isSuccess ? 'bg-green-600 text-white' : 'bg-red-600 text-white'}`;
+                dialog.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-xl z-[9999] transition-all duration-300 transform translate-x-full opacity-0 ${isSuccess ? 'bg-green-600 text-white' : 'bg-red-600 text-white'}`;
                 dialog.innerText = message;
                 document.body.appendChild(dialog);
                 setTimeout(() => {
@@ -263,18 +292,17 @@
                 }, 3000);
             };
 
-            // Custom Confirm Dialog for B2B lead confirmation
             const customConfirm = (message) => {
                 return new Promise(resolve => {
                     const confirmationDialog = document.createElement("div");
-                    confirmationDialog.className = "fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center p-4 z-[9999]";
+                    confirmationDialog.className = "fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center p-4 z-[9999]";
                     confirmationDialog.innerHTML = `
-                    <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md relative">
-                        <h4 class="text-lg font-bold mb-4 text-gray-900">Confirm Details</h4>
-                        <p class="mb-4 whitespace-pre-line text-gray-700">${message}</p>
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+                        <h4 class="text-xl font-bold mb-4 text-gray-900">Confirm Details</h4>
+                        <p class="mb-6 whitespace-pre-line text-gray-700 leading-relaxed">${message}</p>
                         <div class="flex justify-end space-x-4">
-                            <button id="cancelConfirm" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-300">Cancel</button>
-                            <button id="okConfirm" class="btn-primary hover:bg-violet-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">OK</button>
+                            <button id="cancelConfirm" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">Cancel</button>
+                            <button id="okConfirm" class="btn-primary text-white font-bold py-3 px-6 rounded-lg transition duration-300">Submit</button>
                         </div>
                     </div>
                 `;
@@ -294,16 +322,13 @@
                 heroForm.addEventListener('submit', async function (e) {
                     e.preventDefault();
 
-                    // Get values
                     const firstName = document.getElementById("firstName").value.trim();
                     const lastName = document.getElementById("lastName").value.trim();
                     const businessEmail = document.getElementById("businessEmail").value.trim();
                     const companyName = document.getElementById("companyName").value.trim();
                     const organizationSize = document.getElementById("organizationSize").value;
                     const country = document.getElementById("country").value.trim();
-                    // const privacyConsent = document.getElementById("privacyConsent").checked; // Removed check as requested
 
-                    // Simple validation checks
                     if (!firstName || !lastName || !businessEmail || !companyName || !organizationSize || !country) {
                         showDialog("Please fill in all required fields.", false);
                         return;
@@ -315,29 +340,21 @@
                         return;
                     }
 
-
                     const confirmationMessage = `Please confirm your details:\n\nFull Name: ${firstName} ${lastName}\nBusiness Email: ${businessEmail}\nCompany: ${companyName}`;
 
                     const confirmed = await customConfirm(confirmationMessage);
                     if (!confirmed) return;
 
-                    // Timestamp
                     timestampInput.value = new Date().toLocaleString();
-
-                    // Loading state
                     submitBtn.disabled = true;
                     const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = `<svg class="animate-spin h-5 w-5 text-white inline mr-2" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>Submitting...`;
+                    submitBtn.innerHTML = `<span class="inline-flex items-center"><svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> PROCESSING...</span>`;
 
                     try {
-                        // Send form data via EmailJS (template_7jmqb59)
                         await emailjs.sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, heroForm);
                         showDialog("Success! Your download will begin shortly.");
-
-                        // Reset form
                         heroForm.reset();
 
-                        // Trigger Download
                         const link = document.createElement("a");
                         link.href = PDF_DOWNLOAD_URL;
                         link.download = "Customer_Service_Benchmark_Report_2025.pdf";
