@@ -136,7 +136,7 @@
 
                                 <input type="hidden" name="timestamp" id="timestamp">
 
-                                <button type="submit"
+                                <button type="submit" id="submitBtn"
                                     class="w-full bg-[#8B3DFF] hover:bg-[#7A2EE5] text-white py-4 text-sm md:text-lg font-bold rounded shadow-lg transition-all transform hover:-translate-y-0.5 uppercase tracking-widest">
                                     Submit
                                 </button>
@@ -160,32 +160,41 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-16 text-left">
-                <div class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
+
+                <div class="flex flex-col items-center md:items-start space-y-6">
                     <img src="assets/img/image62c.png" alt="Evaluation Framework Icon" class="w-20 h-20 object-contain">
-                    <h3 class="text-2xl font-bold text-gray-900">A practical evaluation framework</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Learn how to audit your current setup, identify gaps, and map them to business outcomes.
-                    </p>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold text-gray-900">A practical evaluation framework</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Learn how to audit your current setup, identify gaps, and map them to business outcomes.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="space-y-6">
+                <div class="flex flex-col items-center md:items-start space-y-6">
                     <img src="assets/img/image62d.png" alt="Comparison Checklist Icon" class="w-20 h-20 object-contain">
-                    <h3 class="text-2xl font-bold text-gray-900">Vendor comparison checklist</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        A ready-to-use scorecard with 9 key dimensions, from omnichannel support to AI readiness and
-                        total cost of ownership.
-                    </p>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Vendor comparison checklist</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            A ready-to-use scorecard with 9 key dimensions, from omnichannel support to AI readiness and
+                            total cost of ownership.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="space-y-6">
+                <div class="flex flex-col items-center md:items-start space-y-6">
                     <img src="assets/img/image62f.png" alt="Future Readiness Icon" class="w-20 h-20 object-contain">
-                    <h3 class="text-2xl font-bold text-gray-900">Future-readiness markers</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Understand how the platform adapts as the business and the space change with speed, scale, and
-                        agent productivity.
-                    </p>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Future-readiness markers</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Understand how the platform adapts as the business and the space change with speed, scale,
+                            and
+                            agent productivity.
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -267,7 +276,7 @@
         const EMAIL_SERVICE_ID = "service_z09fuxl";
         const EMAIL_TEMPLATE_ID = "template_7jmqb59";
         const EMAIL_PUBLIC_KEY = "I64IeI2zG_00GsyoX";
-        const PDF_DOWNLOAD_URL = "https://leadsbaton.github.io/freshdesk-resources-ebooks-choose-customer-service-software-guide//assets/pdf/Freshworks_Buyers_Guide_eBook_1125.pdf";
+        const PDF_DOWNLOAD_URL = "https://leadsbaton.github.io/freshdesk-resources-ebooks-choose-customer-service-software-guide/assets/pdf/Freshworks_Buyers_Guide_eBook_1125.pdf";
 
         document.addEventListener('DOMContentLoaded', function () {
             emailjs.init(EMAIL_PUBLIC_KEY);
@@ -357,7 +366,7 @@
 
                         const link = document.createElement("a");
                         link.href = PDF_DOWNLOAD_URL;
-                        link.download = "Customer_Service_Benchmark_Report_2025.pdf";
+                        link.download = "Freshworks_Buyers_Guide_2026.pdf";
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
